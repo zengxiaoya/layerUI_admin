@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>用户管理系统</title>
+<link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin ">
+  <div class="layui-header layui-bg-green">
+    <div class="layui-logo" style="color: #000;">用户管理系统</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">控制台</a></li>
+      <li class="layui-nav-item"><a href="">商品管理</a></li>
+      <li class="layui-nav-item"><a href="">用户</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="layui/images/user.jpg" class="layui-nav-img">
+          <span id="username"></span>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="/">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">用户列表</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">在职人员</a></dd>
+            <dd><a href="javascript:;">离职人员</a></dd>
+            <dd><a href="javascript:;">试用人员</a></dd>
+            <dd><a href="">黑名单</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">用户行为记录</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">常规操作</a></dd>
+            <dd><a href="javascript:;">危险操作</a></dd>
+            <dd><a href="">违规操作</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">员工考勤列表</a></li>
+        <li class="layui-nav-item"><a href="">关于系统</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;"> 
+    <blockquote class="layui-elem-quote">
+      用户列表 
+    </blockquote>   
+    <div class="layui-row">
+       <div class="layui-col-md12">
+         <form class="layui-form" action="">
+         <table class="layui-table" lay-skin="nob" >
+              <tr>
+                   <td>账户名：</td>
+                   <td>
+                       <div class="layui-input-inline">
+                          <input type="text"  class="layui-input" name="username"  autocomplete="off">
+                       </div>
+                   </td>
+                   <td>中文名：</td>
+                   <td>
+                       <div class="layui-input-inline">
+                         <input type="text"  class="layui-input" name="zh_name"  autocomplete="off">
+                       </div>
+                   </td>                        
+                   <td> <button class="layui-btn" lay-submit="" lay-filter="search">查询</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" id="reset">重置</button></td>
+              </tr>             
+         </table>
+         </form>
+       </div>
+      </div>
+      <table id="demo" lay-filter="table_list"></table>
+      <script type="text/html" id="barDemo">
+           <a class="layui-btn layui-btn-primary layui-btn-mini" lay-event="detail">查看</a>
+           <a class="layui-btn layui-btn-mini" lay-event="edit">编辑</a>
+           <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del">删除</a>
+      </script>
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    © 同步电子科技有限公司 <版权所有>
+  </div>
+</div>
+<script src="layui/layui.js"></script>
+<script  src='js/main.js'>
+</script>
+</body>
+</html>

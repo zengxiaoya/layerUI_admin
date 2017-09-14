@@ -1,0 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+  font-family: "微软雅黑";
+  height: 100vh;
+}
+#nav{
+	background-color: #EEEEEE;
+	height: auto;
+}

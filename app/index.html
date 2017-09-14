@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>用户管理系统-用户登陆</title>
+    <link rel="stylesheet" href="css/normalize.css"/>  
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="favicon.ico"/>
+  </head>
+  <body>
+  <div class="wrapper">
+  <div style="padding: 0;margin-top: 0px;text-align: left;">
+  	<h1 style="text-align: left;" class="animated swing" id="title">用户管理系统</h1>
+  </div>
+  <form class="login animated zoomInUp">
+    <p class="title">用户登陆</p>
+    <input type="text" placeholder="用户名" autofocus id="username" />
+    <i class="fa fa-user"></i>
+    <input type="password" placeholder="密码" id="password"/>
+    <i class="fa fa-key"></i>
+    <a href="#">忘记密码?</a>
+    <a href="register.html">注册账号</a>
+    <button>
+    	<i class="fa fa-check-square-o" id="state_success" style="display: none;"></i>
+    	<i class="fa fa fa-heartbeat" id="state_fault" style="display: none;"></i>
+      <span class="state">登陆</span>
+      <i class="fa fa-spinner fa-spin fa-fw" id="state_loading" style="display: none;"></i>
+    </button>
+  </form>
+  <footer><a target="blank" href="#">版权信息@曾亚所有</a></footer>
+  </p>
+</div>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+  <script src="js/prefixfree.min.js"></script> <!-- css3兼容性处理插件-->
+  <script src="js/page/login.js"></script>    
+  </body>
+</html>
